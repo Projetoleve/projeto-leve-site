@@ -1,133 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projeto Leve | Um passo de cada vez</title>
-<meta name="description" content="Projeto Leve: um programa para ajudar você a construir hábitos mais saudáveis de forma gradual e sustentável.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Projeto Leve | Hábitos e organização</title>
+<meta name="description" content="Projeto Leve: programa educativo para adultos com foco em hábitos, organização e constância.">
 <style>
-:root{--green:#4f8a70;--dark:#234238;--cream:#f7f3ea;--light:#eef5f0;--white:#fff;--text:#33413c;--gold:#c9a96b}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,Helvetica,sans-serif;color:var(--text);background:var(--cream);line-height:1.6}
-header{position:sticky;top:0;z-index:10;background:rgba(247,243,234,.96);border-bottom:1px solid #e4ded1}
-.nav{max-width:1120px;margin:auto;padding:18px 22px;display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:24px;font-weight:800;color:var(--dark);letter-spacing:.5px}
-.logo span{color:var(--green)}
-.nav a{color:var(--dark);text-decoration:none;margin-left:22px;font-weight:600}
-.hero{max-width:1120px;margin:auto;padding:80px 22px 70px;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
-.badge{display:inline-block;background:#e2eee7;color:var(--green);padding:8px 14px;border-radius:999px;font-weight:700;font-size:14px;margin-bottom:18px}
-h1{font-size:clamp(42px,6vw,70px);line-height:1.02;color:var(--dark);margin-bottom:22px}
-h1 span{color:var(--green)}
-.hero p{font-size:19px;max-width:650px;margin-bottom:28px}
-.btn{display:inline-block;background:var(--green);color:#fff;text-decoration:none;padding:15px 24px;border-radius:12px;font-weight:800;box-shadow:0 8px 20px rgba(79,138,112,.2)}
-.btn:hover{transform:translateY(-1px)}
-.hero-card{background:var(--white);border-radius:28px;padding:34px;box-shadow:0 20px 60px rgba(35,66,56,.12);border:1px solid #e5e9e5}
-.circle{width:180px;height:180px;border-radius:50%;background:var(--light);margin:0 auto 22px;display:flex;align-items:center;justify-content:center;font-size:78px}
-.hero-card h3{text-align:center;color:var(--dark);font-size:26px;margin-bottom:8px}
-.hero-card p{text-align:center}
-section{padding:75px 22px}
-.section-inner{max-width:1120px;margin:auto}
-.section-title{text-align:center;font-size:38px;color:var(--dark);margin-bottom:12px}
-.section-sub{text-align:center;max-width:700px;margin:0 auto 42px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:var(--white);padding:28px;border-radius:20px;border:1px solid #e5e9e5}
-.icon{font-size:34px;margin-bottom:10px}
-.card h3{color:var(--dark);margin-bottom:8px}
-.steps{background:var(--light)}
-.step{position:relative}
-.number{width:42px;height:42px;border-radius:50%;background:var(--green);color:white;display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:14px}
-.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
-.plan{background:#fff;border-radius:22px;padding:30px;border:1px solid #e1e6e2}
-.plan.featured{border:2px solid var(--green);transform:translateY(-8px)}
-.plan h3{font-size:23px;color:var(--dark)}
-.price{font-size:38px;font-weight:900;color:var(--green);margin:12px 0}
-.plan ul{list-style:none;margin:20px 0}
-.plan li{margin:9px 0}
-.plan li::before{content:"✓ ";font-weight:bold;color:var(--green)}
-.disclaimer{font-size:13px;color:#6b756f;max-width:850px;margin:30px auto 0;text-align:center}
-.cta{background:var(--dark);color:#fff;text-align:center}
-.cta h2{font-size:42px;margin-bottom:12px}
-.cta p{max-width:650px;margin:0 auto 25px}
-.cta .btn{background:#fff;color:var(--dark)}
-footer{padding:30px 22px;text-align:center;color:#69736e;font-size:14px}
-@media(max-width:800px){
-.nav nav{display:none}.hero{grid-template-columns:1fr;padding-top:50px}.grid,.plans{grid-template-columns:1fr}
-.plan.featured{transform:none}section{padding:55px 18px}.hero{padding-left:18px;padding-right:18px}
-}
+:root{--bg:#fbfaf7;--ink:#26332e;--muted:#66736d;--brand:#6d9b7b;--soft:#e8f1e7;--line:#e3e8e3}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}a{text-decoration:none;color:inherit}.wrap{max-width:1080px;margin:auto;padding:0 20px}
+header{position:sticky;top:0;background:#fbfaf7ee;border-bottom:1px solid var(--line);z-index:5}.nav{height:70px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:25px;font-weight:800}.logo span{color:var(--brand)}nav a{margin-left:20px;color:var(--muted);font-size:14px}
+.hero{padding:72px 0 55px;background:linear-gradient(135deg,#f3f8f2,#fbfaf7)}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:45px;align-items:center}.kicker{color:var(--brand);font-weight:700;text-transform:uppercase;letter-spacing:1.3px;font-size:12px}h1{font-size:52px;line-height:1.04;margin:14px 0 20px}h2{font-size:34px;margin:0 0 12px}h3{margin:8px 0}.lead{font-size:19px;color:var(--muted)}.btn{display:inline-block;background:var(--brand);color:#fff;padding:14px 22px;border-radius:12px;font-weight:700;margin-top:16px}.btn.alt{background:#fff;color:var(--brand);border:1px solid var(--brand);margin-left:8px}
+.hero-card,.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:0 12px 35px #26332e0d}.check{display:flex;gap:10px;margin:13px 0;color:var(--muted)}.check b{color:var(--brand)}
+section{padding:68px 0}.center{text-align:center}.muted{color:var(--muted)}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.price{font-size:35px;font-weight:800;margin:10px 0}.price small{font-size:14px}.featured{border:2px solid var(--brand);transform:translateY(-6px)}.tag{display:inline-block;background:var(--soft);color:#456a52;border-radius:99px;padding:5px 10px;font-size:12px;font-weight:700}ul{padding-left:20px;color:var(--muted)}li{margin:8px 0}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.step{padding:22px;background:#f0f5ef;border-radius:16px}.num{font-size:13px;font-weight:800;color:var(--brand)}.faq{max-width:800px;margin:auto}.faq details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:10px 0}.faq summary{font-weight:700;cursor:pointer}
+footer{padding:35px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px}@media(max-width:800px){.hero-grid,.grid3,.steps{grid-template-columns:1fr}h1{font-size:40px}nav{display:none}.featured{transform:none}.btn.alt{margin-left:0}}
 </style>
 </head>
 <body>
-<header>
-  <div class="nav">
-    <div class="logo">Projeto <span>Leve</span> 🌿</div>
-    <nav><a href="#como">Como funciona</a><a href="#planos">Planos</a><a href="#participar">Participar</a></nav>
-  </div>
-</header>
-
+<header><div class="wrap nav"><div class="logo">Projeto <span>Leve</span></div><nav><a href="#como">Como funciona</a><a href="#planos">Planos</a><a href="#duvidas">Dúvidas</a></nav></div></header>
 <main>
-<section class="hero">
-  <div>
-    <div class="badge">🌿 PROGRAMA DE HÁBITOS E BEM-ESTAR</div>
-    <h1>Cuide de você.<br><span>Um passo de cada vez.</span></h1>
-    <p>O Projeto Leve foi criado para ajudar você a organizar sua rotina, desenvolver hábitos mais saudáveis e acompanhar sua própria evolução com leveza.</p>
-    <a class="btn" href="#planos">QUERO PARTICIPAR</a>
-  </div>
-  <div class="hero-card">
-    <div class="circle">🌱</div>
-    <h3>Mais leveza na rotina</h3>
-    <p>Pequenas mudanças podem construir uma rotina mais saudável e sustentável.</p>
-  </div>
-</section>
-
-<section>
-<div class="section-inner">
-<h2 class="section-title">O que você encontra no Projeto Leve?</h2>
-<p class="section-sub">Um caminho organizado para transformar intenção em hábitos possíveis de manter.</p>
-<div class="grid">
-<div class="card"><div class="icon">🥗</div><h3>Alimentação</h3><p>Orientações gerais para uma rotina alimentar mais equilibrada.</p></div>
-<div class="card"><div class="icon">💧</div><h3>Hábitos</h3><p>Desafios simples para estimular constância e autocuidado.</p></div>
-<div class="card"><div class="icon">🚶</div><h3>Movimento</h3><p>Incentivo a uma rotina mais ativa, respeitando seus limites.</p></div>
-<div class="card"><div class="icon">📊</div><h3>Evolução</h3><p>Registros para acompanhar seu processo ao longo do projeto.</p></div>
-<div class="card"><div class="icon">💬</div><h3>Motivação</h3><p>Conteúdo e acompanhamento para ajudar você a continuar.</p></div>
-<div class="card"><div class="icon">🌿</div><h3>Leveza</h3><p>Sem a ideia de perfeição: foco em progresso e consistência.</p></div>
-</div>
-</div>
-</section>
-
-<section class="steps" id="como">
-<div class="section-inner">
-<h2 class="section-title">Como funciona?</h2>
-<p class="section-sub">É simples começar.</p>
-<div class="grid">
-<div class="card step"><div class="number">1</div><h3>Entre para o projeto</h3><p>Escolha seu plano e faça sua inscrição.</p></div>
-<div class="card step"><div class="number">2</div><h3>Siga as etapas</h3><p>Tenha acesso aos conteúdos e desafios do programa.</p></div>
-<div class="card step"><div class="number">3</div><h3>Acompanhe sua evolução</h3><p>Registre seus hábitos e perceba seu progresso.</p></div>
-</div>
-</div>
-</section>
-
-<section id="planos">
-<div class="section-inner">
-<h2 class="section-title">Escolha seu plano</h2>
-<p class="section-sub">Os valores abaixo são exemplos e podem ser alterados antes de publicar o site.</p>
-<div class="plans">
-<div class="plan"><h3>Leve</h3><div class="price">R$ 49,90</div><p>por mês</p><ul><li>Acesso ao programa</li><li>Conteúdos e desafios</li><li>Registro de evolução</li></ul><a class="btn" href="#participar">QUERO ESTE</a></div>
-<div class="plan featured"><h3>Leve+ ⭐</h3><div class="price">R$ 89,90</div><p>por mês</p><ul><li>Tudo do plano Leve</li><li>Materiais extras</li><li>Suporte ampliado</li></ul><a class="btn" href="#participar">QUERO ESTE</a></div>
-<div class="plan"><h3>Trimestral</h3><div class="price">R$ 199,90</div><p>3 meses</p><ul><li>Acesso por 3 meses</li><li>Conteúdos e desafios</li><li>Registro de evolução</li></ul><a class="btn" href="#participar">QUERO ESTE</a></div>
-</div>
-<p class="disclaimer">O Projeto Leve é apresentado como um programa de hábitos e bem-estar. Resultados individuais variam. Conteúdos de saúde e alimentação devem ser adequados por profissionais habilitados quando necessário.</p>
-</div>
-</section>
-
-<section class="cta" id="participar">
-<div class="section-inner">
-<h2>Seu próximo passo começa agora.</h2>
-<p>Você não precisa mudar tudo de uma vez. Comece com um passo possível e construa sua jornada.</p>
-<a class="btn" href="https://wa.me/5547999999999?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20Projeto%20Leve." target="_blank">FALAR NO WHATSAPP</a>
-</div>
-</section>
+<section class="hero"><div class="wrap hero-grid"><div><div class="kicker">Programa educativo para adultos</div><h1>Mais leveza na rotina. Mais organização para seguir em frente.</h1><p class="lead">Um programa de 8 semanas com desafios simples, organização da rotina, diário e conteúdos educativos para ajudar você a construir hábitos de forma gradual e realista.</p><a class="btn" href="#planos">Conhecer os planos</a><a class="btn alt" href="#como">Como funciona</a></div>
+<div class="hero-card"><h3>O que você encontra</h3><div class="check"><b>✓</b> Conteúdo organizado por semanas</div><div class="check"><b>✓</b> Desafios de hábitos e rotina</div><div class="check"><b>✓</b> Diário de acompanhamento</div><div class="check"><b>✓</b> Guia de organização alimentar</div><div class="check"><b>✓</b> Materiais de apoio</div><p class="muted">Foco em constância, educação e hábitos sustentáveis, sem promessa de resultado específico.</p></div></div></section>
+<section id="como"><div class="wrap"><div class="center"><div class="kicker">Passo a passo</div><h2>Como funciona</h2><p class="muted">Você recebe o material e segue a programação no seu ritmo.</p></div><div class="steps">
+<div class="step"><div class="num">01</div><h3>Escolha</h3><p class="muted">Escolha o pacote que combina com o nível de conteúdo desejado.</p></div>
+<div class="step"><div class="num">02</div><h3>Receba</h3><p class="muted">Após a confirmação do pagamento, você recebe as orientações de acesso.</p></div>
+<div class="step"><div class="num">03</div><h3>Pratique</h3><p class="muted">Acompanhe os desafios e registre seu progresso.</p></div>
+<div class="step"><div class="num">04</div><h3>Continue</h3><p class="muted">Use o que funcionou para construir uma rotina possível.</p></div>
+</div></div></section>
+<section id="planos"><div class="wrap"><div class="center"><div class="kicker">Escolha seu pacote</div><h2>Planos do Projeto Leve</h2><p class="muted">Pagamento processado pelo Asaas.</p></div><div class="grid3">
+<div class="card"><span class="tag">Essencial</span><div class="price">R$ 49,90</div><ul><li>Programa de 8 semanas</li><li>Desafios semanais</li><li>Diário de acompanhamento</li><li>Guia de organização</li></ul><a class="btn" href="https://www.asaas.com/000/c/hnna0n70mjm2fn6f" target="_blank" rel="noopener">Quero o Essencial</a></div>
+<div class="card featured"><span class="tag">Completo</span><div class="price">R$ 89,90</div><ul><li>Kit completo do Projeto Leve</li><li>Programa de 8 semanas</li><li>Desafios e diário</li><li>Receitas simples e guia de organização</li><li>Mensagens de acompanhamento</li></ul><a class="btn" href="https://www.asaas.com/000/c/gxk1o54q1iex3f6p" target="_blank" rel="noopener">Quero o Completo</a></div>
+<div class="card"><span class="tag">Premium</span><div class="price">R$ 149,90</div><ul><li>Conteúdo completo</li><li>Materiais extras</li><li>Desafios e diário</li><li>Orientações de acompanhamento</li><li>Experiência ampliada</li></ul><a class="btn" href="https://www.asaas.com/000/c/mm5kfurarkf4plde" target="_blank" rel="noopener">Quero o Premium</a></div>
+</div></div></section>
+<section><div class="wrap"><div class="card"><div class="kicker">Importante</div><h2>Um programa de hábitos, não uma promessa milagrosa</h2><p class="muted">O Projeto Leve é um material educativo destinado a adultos. Não substitui consulta, diagnóstico ou acompanhamento de profissionais de saúde e não oferece promessa de perda de peso ou resultado específico. Em caso de condição de saúde ou necessidade específica, procure um profissional qualificado.</p></div></div></section>
+<section id="duvidas"><div class="wrap faq"><div class="center"><div class="kicker">Perguntas frequentes</div><h2>Dúvidas</h2></div>
+<details><summary>Como faço o pagamento?</summary><p class="muted">O botão do plano leva ao checkout do Asaas, onde aparecem as opções disponíveis.</p></details>
+<details><summary>Quando recebo o material?</summary><p class="muted">Após a confirmação do pagamento, você recebe as orientações de acesso ao pacote adquirido.</p></details>
+<details><summary>O Projeto Leve garante perda de peso?</summary><p class="muted">Não. O programa é educativo e não garante um resultado corporal específico.</p></details>
+<details><summary>O programa é para qualquer pessoa?</summary><p class="muted">O material foi pensado para adultos. Pessoas com necessidades específicas devem conversar com um profissional de saúde.</p></details>
+</div></section>
 </main>
-
-<footer>© 2026 Projeto Leve · Todos os direitos reservados.</footer>
-</body>
-</html>
+<footer><div class="wrap"><strong>Projeto Leve</strong><br>Programa educativo para adultos sobre hábitos e organização da rotina.<br><br>© 2026 Projeto Leve.</div></footer>
+</body></html>
